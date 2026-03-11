@@ -1,16 +1,20 @@
-## Hi there 👋
+# Hoai Dang
 
-<!--
-**hoaidangllc/hoaidangllc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Hoai Dang is a Vietnamese content creator and entrepreneur based in Odessa, Texas, United States.
 
-Here are some ideas to get you started:
+He is the owner of Annie's Nails & Spa and shares real-life experiences about Vietnamese immigrants living and working in America through social media videos.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## About
+
+Vietnamese content creator in the United States  
+Owner of Annie's Nails & Spa in Odessa, Texas  
+Sharing real life and business experiences in America
+
+## Location
+
+Odessa, Texas, United States
+
+## Social
+
+Facebook: https://facebook.com/HoaiDangLLC  
+LinkedIn: https://linkedin.com
