@@ -478,247 +478,171 @@
     }
 
     .links-wrap {
-      position: relative;
-      z-index: 1;
-      margin-top: 18px;
-      padding: 14px;
-      border-radius: 26px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      overflow: hidden;
-    }
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
 
-    .links-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.04), transparent 28%),
-        radial-gradient(circle at 100% 0%, rgba(255,255,255,.06), transparent 20%);
-      pointer-events: none;
-    }
+.links-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), transparent 28%),
+    radial-gradient(circle at 100% 0%, rgba(255,255,255,.06), transparent 20%);
+  pointer-events: none;
+}
 
-    .links-head {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-      padding: 2px 2px 0;
-    }
+.links-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 2px 2px 0;
+}
 
-    .links-head h2 {
-      margin: 0;
-      font-size: 1rem;
-      color: #fff;
-      letter-spacing: -.02em;
-    }
+.links-head h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: -.02em;
+}
 
-    .links-head span {
-      color: var(--muted-2);
-      font-size: .84rem;
-      font-weight: 700;
-      letter-spacing: .01em;
-    }
+.links-head span {
+  color: var(--muted-2);
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
 
-    .links {
-      position: relative;
-      display: grid;
-      gap: 10px;
-    }
+.links {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
 
-    .link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 18px;
-      background: var(--card);
-      color: var(--card-text);
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow-card);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-      overflow: hidden;
-    }
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 14px 10px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.96);
+  color: var(--card-text);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-card);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  overflow: hidden;
+  text-align: center;
+}
 
-    .link:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-card-hover);
-      border-color: rgba(124,58,237,.14);
-    }
+.link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(139,92,246,.04), transparent 55%);
+  pointer-events: none;
+}
 
-    .icon {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      flex: 0 0 40px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: .98rem;
-      font-weight: 900;
-      box-shadow: 0 8px 18px rgba(0,0,0,.10);
-    }
+.link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(124,58,237,.16);
+}
 
-    .icon.facebook { background: linear-gradient(135deg, #1877f2, #0f5dc1); }
-    .icon.youtube  { background: linear-gradient(135deg, #ff2d2d, #d91f1f); }
-    .icon.tiktok   { background: linear-gradient(135deg, #111111, #000000); }
-    .icon.blog     { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
-    .icon.nails    { background: linear-gradient(135deg, #ec4899, #db2777); }
+.icon {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  margin-bottom: 10px;
+}
 
-    .text {
-      min-width: 0;
-      flex: 1;
-    }
+.icon.facebook { background: linear-gradient(135deg, #1877f2, #0f5dc1); }
+.icon.youtube  { background: linear-gradient(135deg, #ff2d2d, #d91f1f); }
+.icon.tiktok   { background: linear-gradient(135deg, #111111, #000000); }
+.icon.blog     { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+.icon.nails    { background: linear-gradient(135deg, #ec4899, #db2777); }
 
-    .text strong {
-      display: block;
-      margin-bottom: 2px;
-      font-size: .98rem;
-      line-height: 1.22;
-      letter-spacing: -.01em;
-    }
+.text {
+  min-width: 0;
+  flex: unset;
+}
 
-    .text span {
-      display: block;
-      color: var(--card-sub);
-      font-size: .88rem;
-      line-height: 1.42;
-    }
+.text strong {
+  display: block;
+  margin-bottom: 0;
+  font-size: .92rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
 
-    .arrow {
-      color: #9ca3af;
-      font-size: 1.14rem;
-      line-height: 1;
-      margin-left: 6px;
-      transition: transform .18s ease, color .18s ease;
-    }
+.text span {
+  display: none;
+}
 
-    .link:hover .arrow {
-      transform: translateX(2px);
-      color: #6b7280;
-    }
+.arrow {
+  display: none;
+}
 
-    .footer {
-      position: relative;
-      z-index: 1;
-      margin-top: 22px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,.14);
-      text-align: center;
-    }
+@media (max-width: 860px) {
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    .location {
-      margin-bottom: 7px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -.01em;
-    }
+@media (max-width: 740px) {
+  .links-wrap {
+    padding: 12px;
+  }
 
-    .sub {
-      color: var(--muted);
-      font-size: .93rem;
-      line-height: 1.55;
-    }
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-    .hidden-seo {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
+  .link {
+    min-height: 96px;
+    padding: 12px 8px;
+    border-radius: 18px;
+  }
 
-    @media (max-width: 860px) {
-      .platform-grid,
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  .icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
 
-    @media (max-width: 740px) {
-      body {
-        padding: 0;
-        align-items: stretch;
-      }
+  .text strong {
+    font-size: .88rem;
+  }
 
-      .wrap { max-width: 100%; }
-
-      .shell {
-        min-height: 100vh;
-        border-radius: 0;
-        padding: 18px;
-      }
-
-      .hero {
-        min-height: 355px;
-      }
-
-      .hero-overlay {
-        padding: 22px 18px 18px;
-      }
-
-      .avatar-wrap {
-        width: 64px;
-        height: 64px;
-        flex-basis: 64px;
-      }
-
-      .eyebrow {
-        font-size: .71rem;
-        padding: 7px 11px;
-      }
-
-      h1 {
-        font-size: clamp(2.15rem, 9vw, 3.25rem);
-      }
-
-      .hero-sub {
-        font-size: .96rem;
-        line-height: 1.66;
-      }
-
-      .cta-row {
-        grid-template-columns: 1fr;
-      }
-
-      .links-wrap,
-      .feature-box {
-        padding: 12px;
-      }
-
-      .link {
-        padding: 11px 12px;
-        gap: 10px;
-      }
-
-      .icon {
-        width: 36px;
-        height: 36px;
-        flex-basis: 36px;
-        border-radius: 11px;
-        font-size: .9rem;
-      }
-
-      .text strong {
-        font-size: .94rem;
-      }
-
-      .text span,
-      .mini-card span {
-        font-size: .84rem;
-      }
-
-      .links-head span {
-        display: none;
-      }
-    }
+  .links-head span {
+    display: none;
+  }
+}
 
     @media (max-width: 420px) {
       .cta {
@@ -844,58 +768,53 @@
       </section>
 
       <section class="links-wrap">
-        <div class="links-head">
-          <h2>Kết nối &amp; nội dung</h2>
-          <span>Creator platform</span>
-        </div>
+  <div class="links-head">
+    <h2>Kết nối &amp; nội dung</h2>
+    <span>Icon style</span>
+  </div>
 
-        <div class="links">
-          <a class="link" href="https://www.facebook.com/hoaidangllc" target="_blank" rel="noopener noreferrer">
-            <div class="icon facebook">f</div>
-            <div class="text">
-              <strong>Facebook</strong>
-              <span>Bài viết, video và chia sẻ hằng ngày của Hoài.</span>
-            </div>
-            <div class="arrow">›</div>
-          </a>
+  <div class="links">
+    <a class="link" href="https://www.facebook.com/hoaidangllc" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <div class="icon facebook">f</div>
+      <div class="text">
+        <strong>Facebook</strong>
+      </div>
+      <div class="arrow">›</div>
+    </a>
 
-          <a class="link" href="https://www.youtube.com/@hoaidangllc" target="_blank" rel="noopener noreferrer">
-            <div class="icon youtube">▶</div>
-            <div class="text">
-              <strong>YouTube</strong>
-              <span>Nội dung dài hơn, review và hành trình cuộc sống.</span>
-            </div>
-            <div class="arrow">›</div>
-          </a>
+    <a class="link" href="https://www.youtube.com/@hoaidangllc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <div class="icon youtube">▶</div>
+      <div class="text">
+        <strong>YouTube</strong>
+      </div>
+      <div class="arrow">›</div>
+    </a>
 
-          <a class="link" href="https://www.tiktok.com/@hoaidangllc" target="_blank" rel="noopener noreferrer">
-            <div class="icon tiktok">♪</div>
-            <div class="text">
-              <strong>TikTok</strong>
-              <span>Video ngắn về cuộc sống, công việc và chuyện thật ở Mỹ.</span>
-            </div>
-            <div class="arrow">›</div>
-          </a>
+    <a class="link" href="https://www.tiktok.com/@hoaidangllc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <div class="icon tiktok">♪</div>
+      <div class="text">
+        <strong>TikTok</strong>
+      </div>
+      <div class="arrow">›</div>
+    </a>
 
-          <a class="link" href="/blog.html">
-            <div class="icon blog">✍</div>
-            <div class="text">
-              <strong>Blog</strong>
-              <span>Bài viết về cuộc sống ở Mỹ, nghề nail và chuyện đời thật.</span>
-            </div>
-            <div class="arrow">›</div>
-          </a>
+    <a class="link" href="/blog.html" aria-label="Blog">
+      <div class="icon blog">✍</div>
+      <div class="text">
+        <strong>Blog</strong>
+      </div>
+      <div class="arrow">›</div>
+    </a>
 
-          <a class="link" href="https://annienail.com/" target="_blank" rel="noopener noreferrer">
-            <div class="icon nails">✦</div>
-            <div class="text">
-              <strong>Annie’s Nails &amp; Spa</strong>
-              <span>Website chính thức của tiệm nail tại Odessa, Texas.</span>
-            </div>
-            <div class="arrow">›</div>
-          </a>
-        </div>
-      </section>
+    <a class="link" href="https://annienail.com/" target="_blank" rel="noopener noreferrer" aria-label="Annie’s Nails &amp; Spa">
+      <div class="icon nails">✦</div>
+      <div class="text">
+        <strong>Annie’s Nails</strong>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+  </div>
+</section>
 
       <div class="footer">
         <div class="location">Odessa, Texas – USA</div>
